@@ -16,4 +16,5 @@ export type Track = {
 export type AnalyzeResponse = {
     profile: VibeProfile;
     tracks: Track[];
+    error?: string;
 };

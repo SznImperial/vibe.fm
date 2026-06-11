@@ -6,7 +6,7 @@ const groq = new Groq({
 
 export async function analyzeContext(context: string) {
     const response = await groq.chat.completions.create({
-        model: "llama3-8b-8192",
+        model: "llama-3.3-70b-versatile",
         messages: [{
             role: "system",
             content: `You are a music curator. Analyze the user's current context and return a JSON object with this exact shape:

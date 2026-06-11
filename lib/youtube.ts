@@ -22,7 +22,7 @@ async function searchYouTube(query:string): Promise<Track[]> {
     return data.items.map((item: any)=> ({
         videoId: item.id.videoId,
         title: item.snippet.title,
-        thumbnail: item.snippet.thumbnail.medium.url,
+        thumbnail: item.snippet.thumbnails.medium.url,
         channel: item.snippet.channelTitle,
     }));
 }
