@@ -13,7 +13,7 @@ export async function searchTracks(queries: string[]): Promise<Track[]> {
 }
 
 async function searchYouTube(query:string): Promise<Track[]> {
-    const url = `${BASE_URL}/search?part=snippet&type=video&videoCategoryId=10&maxResults=3&q=${encodeURIComponent(query)}&key=${YOUTUBE_API_KEY}`;
+    const url = `${BASE_URL}/search?part=snippet&type=video&videoCategoryId=10&maxResults=1&q=${encodeURIComponent(query)}&key=${YOUTUBE_API_KEY}`;
     const res = await fetch(url);
     const data = await res.json();
 
