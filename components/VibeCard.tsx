@@ -22,7 +22,7 @@ export default function VibeCard({profile}: Props) {
             <p className="text-xs uppercase tracking-widest mb-2 font-bold" style={{color: "var(--muted)", fontFamily: "var(--font-space-grotesk)"}}>
               your vibe
             </p>
-            <h2 className="text-3xl font-black mb-3 tracking-tight bg-gradient-to-r from-white to-zinc-300 bg-clip-text text-transparent" 
+            <h2 className="text-3xl font-black mb-3 tracking-tight bg-linear-to-r from-white to-zinc-300 bg-clip-text text-transparent" 
                 style={{fontFamily: "var(--font-space-grotesk)"}}>
               {profile.vibe}
             </h2>

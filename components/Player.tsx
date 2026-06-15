@@ -126,7 +126,7 @@ export default function Player({ track, onEnded }: Props) {
       
       {audioOnly && (
         <div 
-          className="h-[200px] flex flex-col items-center justify-center relative overflow-hidden" 
+          className="h-50 flex flex-col items-center justify-center relative overflow-hidden" 
           style={{ backgroundColor: "rgba(10, 10, 10, 0.7)", borderBottom: "1px solid rgba(255, 255, 255, 0.05)" }}
         >
           {/* Blurred Background Art */}
@@ -155,11 +155,11 @@ export default function Player({ track, onEnded }: Props) {
           
           {/* Equalizer animation */}
           <div className="flex items-end gap-1.5 h-6 mb-2 z-10">
-            <span className="w-0.5 bg-[var(--accent)] rounded-full eq-bar" style={{ height: '8px' }} />
-            <span className="w-0.5 bg-[var(--accent)] rounded-full eq-bar" style={{ height: '18px' }} />
-            <span className="w-0.5 bg-[var(--accent)] rounded-full eq-bar" style={{ height: '10px' }} />
-            <span className="w-0.5 bg-[var(--accent)] rounded-full eq-bar" style={{ height: '22px' }} />
-            <span className="w-0.5 bg-[var(--accent)] rounded-full eq-bar" style={{ height: '12px' }} />
+            <span className="w-0.5 bg-(--accent) rounded-full eq-bar" style={{ height: '8px' }} />
+            <span className="w-0.5 bg-(--accent) rounded-full eq-bar" style={{ height: '18px' }} />
+            <span className="w-0.5 bg-(--accent) rounded-full eq-bar" style={{ height: '10px' }} />
+            <span className="w-0.5 bg-(--accent) rounded-full eq-bar" style={{ height: '22px' }} />
+            <span className="w-0.5 bg-(--accent) rounded-full eq-bar" style={{ height: '12px' }} />
           </div>
           
           <p className="text-[9px] uppercase tracking-widest font-bold z-10 text-zinc-400" style={{ fontFamily: "var(--font-space-grotesk)" }}>

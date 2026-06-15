@@ -27,7 +27,7 @@ export default function ContextInput({ onAnalyze, loading }: Props) {
           }}
         >
             <textarea 
-              className="w-full rounded-xl p-4 resize-none outline-none border transition-all duration-200 text-sm focus:border-[var(--accent)] focus:shadow-[0_0_15px_rgba(200,255,0,0.1)]" 
+              className="w-full rounded-xl p-4 resize-none outline-none border transition-all duration-200 text-sm focus:border-(--accent) focus:shadow-[0_0_15px_rgba(200,255,0,0.1)]" 
               style={{
                 backgroundColor: "rgba(0, 0, 0, 0.4)", 
                 color: "var(--text)", 
