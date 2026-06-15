@@ -39,20 +39,39 @@ export default function Home() {
     if (nextTrack) setActiveTrack(nextTrack);
   }
   return (
-    <main className="min-h-screen bg-black text-white p-8 max-w-2xl mx-auto">
-      <h1 className="text-4xl font-bold mb-2">Vibe.fm</h1>
-      <p className ="text-zinc-400 mb-8">music for whatever you are doing</p>
+    <main 
+      className={`min-h-screen w-full max-w-2xl self-center px-6 py-12 flex flex-col transition-all duration-500 ease-in-out ${
+        !data ? "justify-center" : "justify-start"
+      }`} 
+      style={{backgroundColor: "var(--bg)"}}
+    >
+      
+      <div className="fixed top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-(--accent) opacity-[0.02] blur-[120px] pointer-events-none" />
+      <div className="fixed bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-(--accent) opacity-[0.015] blur-[120px] pointer-events-none" />
+
+      <div className={`mb-10 text-center transition-all duration-500 ${!data ? "translate-y-0" : "translate-y-0"}`}>
+        <h1 
+          className="text-5xl md:text-6xl font-black tracking-tight mb-3 bg-linear-to-b from-white to-zinc-400 bg-clip-text text-transparent" 
+          style={{fontFamily: "var(--font-space-grotesk)"}}
+        >
+          vibe<span className="text-(--accent) font-light">.fm</span>
+        </h1>
+        <p className="text-sm md:text-base font-medium tracking-wide uppercase text-zinc-500" style={{fontFamily: "var(--font-space-grotesk)"}}>
+          music for whatever you are doing
+        </p>
+      </div>
 
       <ContextInput onAnalyze={handleAnalyze} loading={loading} />
 
       {data && !data.error && (
-        <div className="mt-8 flex flex-col gap-6">
+        <div className="mt-8 flex flex-col gap-6 w-full">
           <VibeCard profile={data.profile} />
           <Player track={activeTrack} onEnded={handleEnded} /> 
           <Playlist
-          tracks={data.tracks}
-          activeTrack={activeTrack}
-          onSelect={setActiveTrack} />
+            tracks={data.tracks}
+            activeTrack={activeTrack}
+            onSelect={setActiveTrack} 
+          />
         </div>
       )}
     </main>
